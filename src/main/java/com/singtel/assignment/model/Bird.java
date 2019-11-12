@@ -1,6 +1,9 @@
 package com.singtel.assignment.model;
 
-public class Bird extends Animal {
+import com.singtel.assignment.behaviour.SoundBehaviour;
+
+
+public class Bird extends Animal implements SoundBehaviour {
 
     public void fly() {
         System.out.println("I am flying");

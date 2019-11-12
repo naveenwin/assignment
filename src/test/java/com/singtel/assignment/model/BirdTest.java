@@ -99,4 +99,28 @@ public class BirdTest {
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant fly");
     }
+
+    @Test
+    public void testParrotWithRoster() {
+        Bird bird = new Parrot(new Roster());
+        bird.sing();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Cock-a-doodle-doo");
+    }
+
+    @Test
+    public void testParrotWithDog() {
+        Bird bird = new Parrot(new Dog());
+        bird.sing();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Woof, woof");
+    }
+
+    @Test
+    public void testParrotWithCat() {
+        Bird bird = new Parrot(new Cat());
+        bird.sing();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Meow");
+    }
 }
