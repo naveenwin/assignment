@@ -50,4 +50,36 @@ public class BirdTest {
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am flying");
     }
+
+    @Test
+    public void testDuckSing() {
+        Bird bird = new Duck();
+        bird.sing();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Quack, quack");
+    }
+
+    @Test
+    public void testDuckSwim() {
+        Duck bird = new Duck();
+        bird.swim();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am swimming");
+    }
+
+    @Test
+    public void testChickenSing() {
+        Bird bird = new Chicken();
+        bird.sing();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Cluck, cluck");
+    }
+
+    @Test
+    public void testChickenCannotFly() {
+        Bird bird = new Chicken();
+        bird.fly();
+
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant fly");
+    }
 }
