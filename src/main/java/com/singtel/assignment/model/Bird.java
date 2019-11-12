@@ -1,5 +1,5 @@
 package com.singtel.assignment.model;
 
-public class Bird extends Animal {
+public abstract class Bird<T> extends Animal<T> {
 
 }

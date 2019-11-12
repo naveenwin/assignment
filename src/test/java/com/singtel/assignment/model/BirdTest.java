@@ -3,6 +3,10 @@ package com.singtel.assignment.model;
 import com.singtel.assignment.behaviour.impl.CatSoundBehaviour;
 import com.singtel.assignment.behaviour.impl.DogSoundBehaviour;
 import com.singtel.assignment.behaviour.impl.RoosterSoundBehaviour;
+import com.singtel.assignment.model.bird.Chicken;
+import com.singtel.assignment.model.bird.Duck;
+import com.singtel.assignment.model.bird.Parrot;
+import com.singtel.assignment.model.bird.Roster;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,30 +32,6 @@ public class BirdTest {
     public void restoreStreams() {
         System.setOut(originalOut);
         System.setErr(originalErr);
-    }
-
-    @Test
-    public void testBirdWalkDefault() {
-        Bird bird = new Bird();
-        bird.walk();
-
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant walk");
-    }
-
-    @Test
-    public void testBirdSingDefault() {
-        Bird bird = new Bird();
-        bird.sing();
-
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant sing");
-    }
-
-    @Test
-    public void testBirdFlyDefault() {
-        Bird bird = new Bird();
-        bird.fly();
-
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant fly");
     }
 
     @Test

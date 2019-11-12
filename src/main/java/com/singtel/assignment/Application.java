@@ -17,9 +17,6 @@ public class Application {
 	public void doSomethingAfterStartup() {
 		System.out.println("Application started");
 
-		Bird bird = new Bird();
-		bird.walk();
-		bird.fly();
-		bird.sing();
+
 	}
 }

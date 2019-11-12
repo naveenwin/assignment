@@ -1,15 +1,9 @@
 package com.singtel.assignment.model;
 
-import com.singtel.assignment.behaviour.FlyBehaviour;
-import com.singtel.assignment.behaviour.SoundBehaviour;
-import com.singtel.assignment.behaviour.SwimBehaviour;
-import com.singtel.assignment.behaviour.WalkBehaviour;
-import com.singtel.assignment.behaviour.impl.NoFlyBehaviour;
-import com.singtel.assignment.behaviour.impl.NoSoundBehaviour;
-import com.singtel.assignment.behaviour.impl.NoSwimBehaviour;
-import com.singtel.assignment.behaviour.impl.NoWalkBehaviour;
+import com.singtel.assignment.behaviour.*;
+import com.singtel.assignment.behaviour.impl.*;
 
-public class Animal {
+public abstract class Animal<T> {
 
     private WalkBehaviour walkBehaviour;
 
@@ -19,11 +13,17 @@ public class Animal {
 
     private SoundBehaviour soundBehaviour;
 
-    Animal(){
+    private EatBehaviour eatBehaviour;
+
+    private JokeBehaviour jokeBehaviour;
+
+    public Animal(){
         walkBehaviour = new NoWalkBehaviour();
         flyBehaviour = new NoFlyBehaviour();
         swimBehaviour = new NoSwimBehaviour();
         soundBehaviour = new NoSoundBehaviour();
+        eatBehaviour = new NoEatBehaviour();
+        jokeBehaviour = new NoJokeBehaviour();
     }
 
     public final void walk(){
@@ -40,6 +40,14 @@ public class Animal {
 
     public final void fly() {
         flyBehaviour.fly();
+    }
+
+    public final void eat(T t) {
+        eatBehaviour.eat(t);
+    }
+
+    public final void joke() {
+        jokeBehaviour.joke();
     }
 
     public void setWalkBehaviour(WalkBehaviour walkBehaviour) {
@@ -72,5 +80,21 @@ public class Animal {
 
     public SoundBehaviour getSoundBehaviour() {
         return soundBehaviour;
+    }
+
+    public EatBehaviour getEatBehaviour() {
+        return eatBehaviour;
+    }
+
+    public void setEatBehaviour(EatBehaviour eatBehaviour) {
+        this.eatBehaviour = eatBehaviour;
+    }
+
+    public JokeBehaviour getJokeBehaviour() {
+        return jokeBehaviour;
+    }
+
+    public void setJokeBehaviour(JokeBehaviour jokeBehaviour) {
+        this.jokeBehaviour = jokeBehaviour;
     }
 }

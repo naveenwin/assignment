@@ -1,6 +1,7 @@
-package com.singtel.assignment.model;
+package com.singtel.assignment.model.bird;
 
 import com.singtel.assignment.behaviour.impl.RoosterSoundBehaviour;
+import com.singtel.assignment.model.Bird;
 
 public class Roster extends Bird {
 
