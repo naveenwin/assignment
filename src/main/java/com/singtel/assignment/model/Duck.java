@@ -1,16 +1,13 @@
 package com.singtel.assignment.model;
 
-import com.singtel.assignment.behaviour.Swimable;
+import com.singtel.assignment.behaviour.SwimBehaviour;
+import com.singtel.assignment.behaviour.impl.DuckSoundBehaviour;
+import com.singtel.assignment.behaviour.impl.YesSwimBehaviour;
 
-public class Duck extends Bird implements Swimable {
+public class Duck extends Bird implements SwimBehaviour {
 
-    @Override
-    public void sing() {
-        System.out.println("Quack, quack");
-    }
-
-    @Override
-    public void swim() {
-        System.out.println("I am swimming");
+    public Duck(){
+        setSwimBehaviour(new YesSwimBehaviour());
+        setSoundBehaviour(new DuckSoundBehaviour());
     }
 }

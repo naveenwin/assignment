@@ -1,5 +1,8 @@
 package com.singtel.assignment.model;
 
+import com.singtel.assignment.behaviour.impl.CatSoundBehaviour;
+import com.singtel.assignment.behaviour.impl.DogSoundBehaviour;
+import com.singtel.assignment.behaviour.impl.RoosterSoundBehaviour;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,27 +31,27 @@ public class BirdTest {
     }
 
     @Test
-    public void testBirdWalk() {
+    public void testBirdWalkDefault() {
         Bird bird = new Bird();
         bird.walk();
 
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am walking");
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant walk");
     }
 
     @Test
-    public void testBirdSing() {
+    public void testBirdSingDefault() {
         Bird bird = new Bird();
         bird.sing();
 
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am singing");
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant sing");
     }
 
     @Test
-    public void testBirdFly() {
+    public void testBirdFlyDefault() {
         Bird bird = new Bird();
         bird.fly();
 
-        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am flying");
+        Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant fly");
     }
 
     @Test
@@ -102,7 +105,7 @@ public class BirdTest {
 
     @Test
     public void testParrotWithRoster() {
-        Bird bird = new Parrot(new Roster());
+        Bird bird = new Parrot(new RoosterSoundBehaviour());
         bird.sing();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Cock-a-doodle-doo");
@@ -110,7 +113,7 @@ public class BirdTest {
 
     @Test
     public void testParrotWithDog() {
-        Bird bird = new Parrot(new Dog());
+        Bird bird = new Parrot(new DogSoundBehaviour());
         bird.sing();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Woof, woof");
@@ -118,7 +121,7 @@ public class BirdTest {
 
     @Test
     public void testParrotWithCat() {
-        Bird bird = new Parrot(new Cat());
+        Bird bird = new Parrot(new CatSoundBehaviour());
         bird.sing();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Meow");

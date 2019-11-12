@@ -1,6 +1,6 @@
 package com.singtel.assignment.behaviour;
 
-public interface Swimable {
+public interface SwimBehaviour {
 
     void swim();
 }

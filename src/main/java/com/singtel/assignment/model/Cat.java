@@ -1,11 +1,10 @@
 package com.singtel.assignment.model;
 
-import com.singtel.assignment.behaviour.SoundBehaviour;
+import com.singtel.assignment.behaviour.impl.CatSoundBehaviour;
 
-public class Cat extends Animal implements SoundBehaviour {
+public class Cat extends Animal {
 
-    @Override
-    public void sing() {
-        System.out.println("Meow");
+    public Cat() {
+        setSoundBehaviour(new CatSoundBehaviour());
     }
 }

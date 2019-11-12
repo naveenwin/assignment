@@ -1,15 +1,11 @@
 package com.singtel.assignment.model;
 
+import com.singtel.assignment.behaviour.impl.ChickenSoundBehaviour;
+
 public class Chicken extends Bird {
 
-    @Override
-    public void sing() {
-        System.out.println("Cluck, cluck");
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("I cant fly");
+    public Chicken(){
+        setSoundBehaviour(new ChickenSoundBehaviour());
     }
 }
 
