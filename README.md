@@ -148,7 +148,7 @@ java -jar assignment-1.0.0.jar
 
 Running jar by passing the commands from file
 ```
-java -jar assignment-1.0.0.jar "{path}/input.txt"
+java -jar assignment-1.0.0.jar
 ```
 
 
