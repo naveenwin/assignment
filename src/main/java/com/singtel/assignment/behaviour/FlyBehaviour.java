@@ -1,6 +1,6 @@
 package com.singtel.assignment.behaviour;
 
-public interface FlyBehaviour {
+public interface FlyBehaviour extends Behaviour {
 
     void fly();
 }

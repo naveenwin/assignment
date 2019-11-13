@@ -1,6 +1,6 @@
 package com.singtel.assignment.behaviour;
 
-public interface JokeBehaviour {
+public interface JokeBehaviour extends Behaviour {
 
     void joke();
 }

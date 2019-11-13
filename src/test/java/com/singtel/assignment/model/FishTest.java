@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+
+//TODO Pending Negative Scenario tests
 public class FishTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -76,36 +78,29 @@ public class FishTest {
         fish.joke();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am joking");
-
     }
 
     @Test
     public void testSharkEatOtherFish(){
-
         Fish<ClownFish> fish = new Shark<>();
         fish.eat(new ClownFish());
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am eating other fish");
-
     }
 
     @Test
     public void testSharkEatSharkFish(){
-
         Fish<Shark> fish = new Shark<>();
         fish.eat(new Shark());
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant eat shark");
-
     }
 
     @Test
     public void testDolphinSwim(){
-
         Dolphin fish = new Dolphin();
         fish.swim();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I am swimming");
-
     }
 }

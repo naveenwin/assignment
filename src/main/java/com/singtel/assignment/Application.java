@@ -1,6 +1,5 @@
 package com.singtel.assignment;
 
-import com.singtel.assignment.model.Bird;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -16,7 +15,6 @@ public class Application {
 	@EventListener(ApplicationReadyEvent.class)
 	public void doSomethingAfterStartup() {
 		System.out.println("Application started");
-
 
 	}
 }

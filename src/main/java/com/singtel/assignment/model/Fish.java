@@ -7,6 +7,7 @@ public abstract class Fish<T> extends Animal<T> {
     protected String size = "UnKnown";
     protected String colour = "UnKnown";
 
+    //TODO Build object using builder patter same as Chicken Class
     public Fish(){
         setSwimBehaviour(new YesSwimBehaviour());
     }

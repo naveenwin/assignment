@@ -5,6 +5,7 @@ import com.singtel.assignment.model.Fish;
 
 public class Shark<T extends Fish> extends Fish<T> {
 
+    //TODO Build object using builder patter same as Chicken Class
     public Shark(){
         setEatBehaviour(new SharkEatBehaviour());
         setSize("Large");

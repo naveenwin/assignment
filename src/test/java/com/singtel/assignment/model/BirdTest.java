@@ -1,6 +1,7 @@
 package com.singtel.assignment.model;
 
 import com.singtel.assignment.behaviour.impl.CatSoundBehaviour;
+import com.singtel.assignment.behaviour.impl.ChickenSoundBehaviour;
 import com.singtel.assignment.behaviour.impl.DogSoundBehaviour;
 import com.singtel.assignment.behaviour.impl.RoosterSoundBehaviour;
 import com.singtel.assignment.model.bird.Chicken;
@@ -15,6 +16,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+//TODO Pending Negative Scenario tests
 public class BirdTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -52,7 +54,7 @@ public class BirdTest {
 
     @Test
     public void testChickenSing() {
-        Bird bird = new Chicken();
+        Bird bird = Chicken.builder().buildWith(new ChickenSoundBehaviour()).build();
         bird.sing();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("Cluck, cluck");
@@ -60,7 +62,7 @@ public class BirdTest {
 
     @Test
     public void testChickenCannotFly() {
-        Bird bird = new Chicken();
+        Bird bird = Chicken.builder().buildWith(new ChickenSoundBehaviour()).build();
         bird.fly();
 
         Assertions.assertThat(outContent.toString()).isEqualToIgnoringNewLines("I cant fly");

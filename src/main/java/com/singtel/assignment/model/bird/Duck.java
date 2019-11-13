@@ -7,6 +7,7 @@ import com.singtel.assignment.model.Bird;
 
 public class Duck extends Bird implements SwimBehaviour {
 
+    //TODO Build object using builder patter same as Chicken Class
     public Duck(){
         setSwimBehaviour(new YesSwimBehaviour());
         setSoundBehaviour(new DuckSoundBehaviour());

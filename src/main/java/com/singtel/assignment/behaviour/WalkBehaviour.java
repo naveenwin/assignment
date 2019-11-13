@@ -1,6 +1,6 @@
 package com.singtel.assignment.behaviour;
 
-public interface WalkBehaviour {
+public interface WalkBehaviour extends Behaviour {
 
-    public void walk();
+    void walk();
 }

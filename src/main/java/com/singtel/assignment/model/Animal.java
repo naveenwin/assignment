@@ -5,17 +5,17 @@ import com.singtel.assignment.behaviour.impl.*;
 
 public abstract class Animal<T> {
 
-    private WalkBehaviour walkBehaviour;
+    protected WalkBehaviour walkBehaviour;
 
-    private FlyBehaviour flyBehaviour;
+    protected FlyBehaviour flyBehaviour;
 
-    private SwimBehaviour swimBehaviour;
+    protected SwimBehaviour swimBehaviour;
 
-    private SoundBehaviour soundBehaviour;
+    protected SoundBehaviour soundBehaviour;
 
-    private EatBehaviour eatBehaviour;
+    protected EatBehaviour eatBehaviour;
 
-    private JokeBehaviour jokeBehaviour;
+    protected JokeBehaviour jokeBehaviour;
 
     public Animal(){
         walkBehaviour = new NoWalkBehaviour();

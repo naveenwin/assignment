@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+//TODO Pending Negative Scenario tests
 public class ButterflyTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
