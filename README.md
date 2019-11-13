@@ -141,12 +141,7 @@ mvn test
 
 Once maven install is done a 'target' folder is generated with the project .jar file. It can be run using the command
 
-This will accept the commands from the console
-```
-java -jar assignment-1.0.0.jar
-```
-
-Running jar by passing the commands from file
+Running jar 
 ```
 java -jar assignment-1.0.0.jar
 ```
